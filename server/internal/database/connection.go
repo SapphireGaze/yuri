@@ -15,7 +15,7 @@ func ConnectDB() *pg.DB {
 		Password: os.Getenv("DB_PASS"),
 		Database: "yuri",
 		OnConnect: func(ctx context.Context, cn *pg.Conn) error {
-			fmt.Printf("Successfully connected to database as %s", os.Getenv("DB_USER"))
+			fmt.Printf("Successfully connected to database as %s\n", os.Getenv("DB_USER"))
 			return nil
 		},
 	}
